@@ -4,11 +4,14 @@
   "description": "Primeiro projeto com Cypress",
   "main": "index.js",
   "scripts": {
-    "test": "npx cypress open"
+    "test": "npx cypress open",
+    "build": "npx cypress run",
+    "report": "npx cypress run --reporter mochawesome"
   },
   "author": "Lucas Jesus",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^9.1.1"
+    "cypress": "^9.1.1",
+    "mochawesome": "^7.1.3"
   }
 }
