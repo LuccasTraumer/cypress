@@ -11,4 +11,17 @@ describe('Buscar fotos e dados', () => {
             expect(response.body[0].description).to.be.equal('Farol iluminado');
         })
     });
+
+    it('Efetuar login do flavio', () => {
+        cy.request({
+            method: 'POST',
+            url: 'https://alurapic.herokuapp.com/user/login',
+            body: Cypress.env()
+        }).then((response) => {
+            expect(response.status).to.be.equal(200);
+            expect(response.body).is.not.empty;
+            expect(response.body[0]).to.have.property('id');
+            expect(response.body[0].id).to.be.equal('1');
+        })
+    });
 });
