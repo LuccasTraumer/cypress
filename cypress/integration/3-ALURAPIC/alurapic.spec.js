@@ -1,4 +1,4 @@
-describe('Login e registro de usuarios alura pic', () => {
+ describe('Login e registro de usuarios alura pic', () => {
 
     beforeEach(() => {
       cy.visit('https://alura-fotos.herokuapp.com')
@@ -31,6 +31,18 @@ describe('Login e registro de usuarios alura pic', () => {
         cy.contains('ap-vmessage', 'Mininum length is 8').should('be.visible');
      
     })
+
+     const usuarios = require('../../fixtures/usuarios.json');
+    usuarios.forEach(usuario => {
+        it(`quando efetuar registro do usuario ${usuario.userName} deve executar com sucesso`, () => {
+            cy.contains('a', 'Register now');
+            cy.contains('button', 'Register');
+            cy.get('input[formcontrolname="email"]').type(usuario.email);
+            cy.get('input[formcontrolname="fullName"]').type(usuario.fullName);
+            cy.get('input[formcontrolname="userName"]').type(usuario.userName);
+            cy.get('input[formcontrolname="password"]').type(usuario.password);
+        });
+    });
 
 })
 

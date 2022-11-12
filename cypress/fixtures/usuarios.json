@@ -1,0 +1,26 @@
+[
+  {
+    "email": "lucas@gmail.com",
+    "userName": "lucas",
+    "fullName": "Lucas Jesus",
+    "password": "123"
+  },
+  {
+    "email": "david@gmail.com",
+    "userName": "david",
+    "fullName": "David Jesus",
+    "password": "123"
+  },
+  {
+    "email": "matheus@gmail.com",
+    "userName": "matheus",
+    "fullName": "Matheus Jesus",
+    "password": "123"
+  },
+  {
+    "email": "miguel@gmail.com",
+    "userName": "Miguel",
+    "fullName": "Miguel Jesus",
+    "password": "123"
+  }
+]
